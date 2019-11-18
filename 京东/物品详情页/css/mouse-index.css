@@ -1,0 +1,702 @@
+.mouse_main {
+    width: 1210px;
+    min-width: 1210px;
+    height: 544px;
+    margin-top: 50px;
+}
+
+.mouse_l {
+    width: 365px;
+    height: 544px;
+    float: left;
+    position: relative;
+}
+
+.mouse_c {
+    width: 580px;
+    height: 544px;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+.mouse_r {
+    width: 233px;
+    margin-left: 22px;
+    height: 544px;
+    float: left;
+}
+
+.bigimg {
+    width: 100%;
+    overflow: hidden;
+    height: 380px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.bigimg img {
+    position: absolute;
+}
+
+.bigArea {
+    position: absolute;
+    display: none;
+    width: 375px;
+    height: 375px;
+    overflow: hidden;
+    top: 56px;
+    left: 375px;
+    z-index: 999;
+    border: 1px solid #ddd;
+}
+
+.bigArea img {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+}
+
+.smallArea {
+    display: none;
+    width: 180px;
+    height: 180px;
+    background: rgba(250, 255, 162, 0.6);
+    position: absolute;
+    cursor: move;
+}
+
+.smallul {
+    height: 58px;
+    position: relative;
+}
+
+.smallul ul {
+    margin: 0 auto;
+    width: 290px;
+    height: 58px;
+    position: relative;
+    overflow: hidden;
+}
+
+.smallul li {
+    float: left;
+    width: 54px;
+    height: 54px;
+    border: 2px solid #fff;
+}
+
+.smallul li.hover {
+    border: 2px solid #cb131a;
+}
+
+.smallul li img {
+    width: 54px;
+    height: 54px;
+}
+
+.arrow > a:nth-child(1) {
+    position: absolute;
+    left: 10px;
+    top: 16px;
+    width: 16px;
+    height: 27px;
+    display: block;
+    transform: rotateY(180deg);
+    background: url("../imgs/rscroll.jpg");
+}
+
+.arrow > a:nth-child(2) {
+    position: absolute;
+    width: 16px;
+    height: 27px;
+    display: block;
+    right: 10px;
+    top: 16px;
+    background: url("../imgs/rscroll.jpg");
+}
+
+.share {
+    margin: 0 auto;
+    width: 290px;
+    height: 110px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.share span {
+    float: left;
+}
+
+.share a {
+    float: right;
+    text-align: right;
+}
+
+.share > a:nth-child(2) {
+    width: 68px;
+    background: url("../imgs/heart.jpg") no-repeat center left;
+}
+
+.share > a:nth-child(3) {
+    width: 48px;
+    margin-right: 15px;
+    background: url("../imgs/share.jpg") no-repeat center left;
+}
+
+.title {
+    height: 70px;
+    position: relative;
+}
+
+.title h1 {
+    width: 532px;
+    overflow: hidden;
+    font: bold 16px/35px "yahei";
+    color: #333;
+}
+
+.title p {
+    width: 532px;
+    overflow: hidden;
+    font: 14px "yahei";
+    color: #C81623;
+}
+
+.title .compare {
+    width: 56px;
+    height: 22px;
+    line-height: 22px;
+    display: block;
+    background: #F5F5F5;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.sail {
+    height: 114px;
+    background: #F7F7F7;
+    position: relative;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei";
+}
+
+.sail .apraise {
+    position: absolute;
+    right: 14px;
+    top: 18px;
+}
+
+.sail .price {
+    height: 30px;
+}
+
+.sail span, .adress span {
+    letter-spacing: 2px;
+    margin-right: 10px;
+    line-height: 28px;
+    font-family: "simsun";
+}
+
+.serverce span {
+    letter-spacing: 2px;
+    margin-right: 10px;
+    line-height: 44px;
+    font-family: "simsun";
+}
+
+.sail .price i {
+    font: bolder 20px/30px "yahei";
+    color: #C81623;
+    margin-right: 10px;
+}
+
+.sail .price a {
+    color: #767CF9;
+    font: 12px/30px "yahei";
+}
+
+.sail .apraise {
+    height: 40px;
+    width: 80px;
+    border-left: 1px solid #ddd;
+    text-align: center;
+}
+
+.apraise p {
+    text-align: center;
+    color: #767CF9;
+    font: 14px/28px "yahei";
+}
+
+.sail .sales {
+    height: 60px;
+    margin-top: 10px;
+}
+
+.sales .sales_name {
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.sail .sales i {
+    border: 1px solid #C81623;
+    color: #C81623;
+    padding: 2px 5px;
+    font: 12px/30px "yahei";
+    margin: 0 10px;
+}
+
+.adress {
+    height: 101px;
+    border-bottom: 1px dotted #ddd;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei";
+}
+
+.adress .suport, .dest, .sercice {
+    height: 28px;
+    line-height: 27px;
+}
+
+.suport i {
+    color: #C81623;
+}
+
+.suport em {
+    width: 22px;
+    height: 22px;
+    vertical-align: text-bottom;
+    display: inline-block;
+    background: url("../imgs/icon01.png") no-repeat 0 -211px;
+    margin: 0 5px;
+
+}
+
+.dest_l {
+    width: 135px;
+    height: 26px;
+    border: 1px solid #6c929e;
+    position: relative;
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.dest_l:hover {
+    border: 1px solid #C81623;
+}
+
+.dest_l dd {
+    width: 118px;
+    overflow: hidden;
+    height: 28px;
+}
+
+.triangle {
+    width: 15px;
+    height: 7px;
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    right: 5px;
+    top: 10px;
+}
+
+.triangle em {
+    height: 15px;
+    font: bold 12px/7px "simsun";
+    position: absolute;
+    top: -3px;
+    color: #000;
+}
+
+.msg {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../imgs/wenhao.png") no-repeat center;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.dest_r b {
+    font: bold 12px/28px "yahei";
+    color: #999;
+    margin: 0 4px;
+}
+
+.serverce {
+    height: 138px;
+    line-height: 44px;
+    padding: 14px 18px;
+    position: relative;
+}
+
+.security > div[class^="security"] {
+    width: 135px;
+    height: 26px;
+    border: 1px solid #6c929e;
+    padding: 0 4px;
+    margin: 6px 4px 0 0;
+    line-height: 28px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.nowhy {
+    display: none;
+    width: 230px;
+    top: 26px;
+    left: -1px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.nowhy li {
+    line-height: 34px;
+    font: 12px/34px "yahei";
+    cursor: pointer;
+}
+
+.nowhy li input {
+    vertical-align: middle;
+}
+
+.nowhy li i {
+    margin: 0 5px;
+    font: 12px/34px "yahei";
+    background-color: #f19c9d;
+    color: #fff;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+.nowhy li span {
+    letter-spacing: 0;
+    font: 12px/34px "yahei";
+    margin: 0 6px;
+}
+
+.nowhy li a {
+    display: none;
+    float: right;
+    margin-right: 5px;
+}
+
+.nowhy li:hover a {
+    display: inline-block;
+    color: #C81623;
+}
+
+.map {
+    display: none;
+    width: 360px;
+    top: 26px;
+    left: -1px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 3;
+}
+
+.map h4 {
+    font: bold 14px/30px "yahei";
+    height: 30px;
+    letter-spacing: 1px;
+}
+
+.map li input {
+    vertical-align: middle;
+    border: none;
+    margin-right: 8px;
+}
+
+.map li span {
+    font: 12px/24px "宋体";
+    height: 24px;
+}
+
+.security > div[class^="security"]:hover {
+    border-left: 1px solid #C81623;
+    border-right: 1px solid #C81623;
+    border-top: 1px solid #C81623;
+    border-bottom: 1px solid #fff;
+    z-index: 2;
+}
+
+.security > div[class^="security"] b {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+.security > div[class^="security"] dd {
+    display: inline-block;
+}
+
+.security .security_l b {
+    background: url("../imgs/icon02.png") no-repeat center;
+}
+
+.security .security_c b {
+    background: url("../imgs/icon03.png") no-repeat center;
+}
+
+.security .security_r b {
+    background: url("../imgs/icon04.png") no-repeat center;
+}
+
+.cover a {
+    padding: 6px 10px;
+    border: 1px solid #6c929e;
+    margin-right: 6px;
+    box-sizing: border-box;
+}
+
+.cover a:hover {
+    border: 1px solid #C81623;
+}
+
+.cover a.hover {
+    border: 1px solid #C81623;
+}
+
+.stage a {
+    padding: 6px 6px;
+    border: 1px solid #6c929e;
+    margin-right: 6px;
+}
+
+.stage a:hover {
+    border: 1px solid #C81623;
+}
+
+.stage a.hover {
+    border: 1px solid #C81623;
+}
+
+.shopcar {
+    height: 112px;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+
+.shopcar .cases {
+    width: 56px;
+    height: 44px;
+    text-align: center;
+    background: #fff;
+    font-family: "yahei";
+}
+
+.shopcar .cases input {
+    width: 36px;
+    height: 100%;
+    text-align: center;
+    font-family: "yahei";
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.shopcar .cases .calc {
+    width: 20px;
+    height: 100%;
+}
+
+.calc a {
+    height: 22px;
+    display: block;
+    border: 1px solid #ddd;
+    background: #ededed;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.carbtn {
+    width: 112px;
+    height: 44px;
+    background: #C81623;
+    color: #fff;
+    text-align: center;
+    font: bold 16px/44px "yahei";
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin-left: 10px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.carbtn:hover {
+    color: #fff;
+    box-shadow: 1px 1px 8px #333;
+}
+.security-msg{
+    width: 264px;
+    position: absolute;
+    display: none;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    word-break: break-all;
+    top: 45px;
+    right: -10px;
+    z-index: 999;
+    background: #fff;
+}
+.msga{
+    padding: 20px;
+}
+.security-msg p{
+    line-height: 20px;
+    font-family: "yahei";
+    padding: 5px 0;
+}
+.security-msg>P:nth-child(1){
+    border-bottom: 1px dashed #ddd;
+}
+.security-msg p a{
+    margin: 0 8px;
+    color:#767CF9;
+}
+.stage-msg{
+    width: 264px;
+    position: absolute;
+    display: none;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    word-break: break-all;
+    top: 425px;
+    right: -10px;
+    z-index: 999;
+    background: #fff;
+}
+.stage-msg li{
+    font-family: "yahei";
+}
+.shoplogo {
+    height: 84px;
+    line-height: 84px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.shoplogo img {
+    transition: all .8s;
+}
+
+.shoplogo:hover img {
+    transform: scale(1.1);
+}
+
+.shoplinks {
+    height: 185px;
+}
+
+.links {
+    width: 199px;
+    margin: 0 auto;
+}
+
+.custmer {
+    width: 180px;
+    margin: 0 auto;
+    height: 52px;
+    line-height: 52px;
+    font: 12px/52px "SimSun", "宋体";
+    color: #767CF9;
+}
+
+.custmer > span:nth-child(2) {
+    width: 48px;
+    height: 14px;
+    background: #E3393C;
+    line-height: 14px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    margin: 16px auto;
+}
+
+.links a {
+    width: 92px;
+    height: 30px;
+    font: 12px/30px "yahei";
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 8px 2px;
+}
+
+.links a i {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+.links > a:nth-child(2) i {
+    background: url("../imgs/popScore.png") no-repeat -51px 0;
+}
+
+.links > a:nth-child(3) i {
+    background: url("../imgs/popScore.png") no-repeat -128px 0;
+}
+
+.links > a:nth-child(4) i {
+    background: url("../imgs/popScore.png") no-repeat -102px 0;
+}
+
+.links > a:nth-child(5) i {
+    background: url("../imgs/popScore.png") no-repeat -76px 0;
+}
+
+.ssport {
+    width: 198px;
+    margin: 22px auto;
+}
+
+.ssport p {
+    line-height: 40px;
+}
+
+.ssport span {
+    margin-right: 40px;
+    color: #767CF9;
+}
+
+.ssport i {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.ssport > p > span:nth-child(1) i {
+    background: url("../imgs/zhongbiao.png") no-repeat center;
+}
+
+.ssport > p > span:nth-child(2) i {
+    background: url("../imgs/shoutixiang.png") no-repeat center;
+}
+
