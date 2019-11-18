@@ -1,0 +1,52 @@
+/*css的初始化 B*/
+html, body, h1, h2, h3, p, ul, li, img, dt, dl, dd, form, p {
+    margin: 0;
+    padding: 0;
+}
+i{
+    font-style: normal;}
+body {
+    background-color: #fff;
+    color: #333;
+    font: 12px/24px Arial, "yahei";
+}
+
+ul {
+    list-style-type: none;
+}
+
+input, img {
+    border: 0;
+    outline-style: none;
+}
+.w{width: 1226px;margin:0 auto;}
+a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.claerfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*css的初始化 E*/
