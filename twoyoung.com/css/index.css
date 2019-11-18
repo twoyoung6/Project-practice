@@ -1,0 +1,184 @@
+body {
+  background: #fff;
+}
+.header {
+  width: 100%;
+  border-bottom: 1px dashed #333;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+    margin: 0;
+  }
+  .header h1 a {
+    color: #333;
+  }
+  .header h1 span {
+    font-size: 16px;
+    color: #666;
+  }
+  .header h1 img {
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .header h1 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 26px;
+    margin: 0;
+  }
+  .header h1 a {
+    color: #333;
+  }
+  .header h1 span {
+    font-size: 16px;
+    color: #666;
+  }
+  .header h1 img {
+    width: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  .header .dress li {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header .dress {
+    line-height: 40px;
+  }
+  .header .dress ul {
+    width: 100%;
+    float: left;
+  }
+  .header .dress li {
+    float: left;
+  }
+  .header .dress li:nth-child(3),
+  .header .dress li:nth-child(4) {
+    float: right;
+  }
+  .header .dress a {
+    margin: 0 5px;
+  }
+  .header .dress a .iconfont {
+    font-size: 26px;
+    margin: 2px;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 768px) {
+  .header .dress {
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+  }
+  .header .dress ul {
+    float: right;
+  }
+  .header .dress li {
+    float: left;
+  }
+  .header .dress li a {
+    margin: 0 5px;
+  }
+  .header .dress li a .iconfont {
+    font-size: 26px;
+    margin: 2px;
+    vertical-align: middle;
+  }
+  .header .dress li:nth-child(1) a:hover {
+    color: #3c78db;
+  }
+  .header .dress li:nth-child(2) a:hover {
+    color: #E85205;
+  }
+  .header .dress li:nth-child(3) a:hover {
+    color: #333;
+  }
+  .header .dress li:nth-child(4) a:hover {
+    color: #009A61;
+  }
+}
+.main {
+  padding: 20px 0;
+}
+.main .project .row {
+  margin: 0;
+}
+.main .project .pro {
+  background: rgba(0, 154, 97, 0.4);
+  border: 6px dashed #fff;
+  height: 130px;
+  padding: 0px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+.main .project .pro a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 10px;
+}
+.main .project .pro a .glyphicon {
+  font-size: 44px;
+  color: #fff;
+  vertical-align: middle;
+  transition: all .6s;
+}
+.main .project .pro a:hover .glyphicon {
+  transform: translateY(-6px);
+}
+.main .project .pro a:hover h3 {
+  transform: translateY(-6px);
+}
+.main .project .pro a p {
+  color: #333;
+}
+.main .project .pro a p .label {
+  padding: .1em .2em .2em;
+  font-weight: normal;
+}
+.main .project .pro a h3 {
+  font-size: 20px;
+  display: inline-block;
+  color: #fff;
+  margin: 0;
+  transition: all .6s;
+}
+.footer {
+  height: 80px;
+  border-top: 2px dashed #333;
+  font-size: 12px;
+  color: #333;
+}
+.footer .code {
+  margin: 5px;
+}
+.footer .code img {
+  height: 70px;
+  vertical-align: middle;
+}
+.footer .code span {
+  line-height: 70px;
+  margin-left: 5px;
+}
+.footer .msg {
+  line-height: 80px;
+  margin: 0px 10px;
+}
+.footer .msg i {
+  margin: 0 4px;
+  color: #009A61;
+}
