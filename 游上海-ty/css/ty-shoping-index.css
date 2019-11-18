@@ -1,0 +1,156 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: .26rem;
+}
+.tylayout {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    font-size: .26rem;
+}
+.tytopbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.1rem;
+    height: .7rem;
+    line-height: .7rem;
+    font-size: .34rem;
+    background: #4DBAFF;
+    color: #fff;
+}
+.tytopbar .title {
+    text-align: center;
+}
+.tytopbar .back a {
+    width: .5rem;
+    height: .42rem;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+}
+.tytopbar .share a {
+    width: .5rem;
+    height: .42rem;
+    display: inline-block;
+    color: #fff;
+    margin: 0 .04rem;
+    text-decoration: none;
+}
+.carousel{
+    width: 100%;
+    height: 3.45rem;
+}
+.carousel .carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner .item{
+    width: 100%;
+    height: 100%;
+}
+.carousel-inner .item img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-indicators{
+    bottom: .03rem;
+}
+.carousel-indicators li{
+    width: .2rem;
+    height: .2rem;
+    border: .03rem solid #4dbaff;
+    border-radius: 50%;
+    margin: .05rem;
+}
+.carousel-indicators .active{
+    width: .2rem;
+    height: .2rem;
+    background: #4dbaff;
+    border: .03rem solid #fff;
+    margin: .05rem;
+}
+.tyshoppark{
+    padding: .4rem .3rem .3rem .3rem;
+    width: 100%;
+}
+.near{
+    width: 100%;
+    margin-bottom: .2rem;
+    border-bottom: 1px solid #aaa;
+}
+.tymsg{
+    font-size: .28rem;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid #aaa;
+}
+.tymsg .glyphicon{
+    top:0;
+    vertical-align: top;
+    font-size: .35rem;
+    color: #A63845;
+}
+.tymsg span{
+    margin-left: .15rem;
+}
+.nearpark{
+    width: 100%;
+    margin-bottom: .2rem;
+}
+.nearpark>div{
+    width: 50%;
+    height: 1.53rem;
+    display: flex;
+    padding: .2rem 0 0 0;
+}
+.nearpark>div img{
+    width: 50%;
+    height: 100%;
+}
+.nearpark .txt{
+    padding-left: .1rem;
+}
+.nearpark .txt p{
+    height: 50%;
+}
+.nearpark .txt p a{
+    font-weight: 700;
+    text-decoration: none;
+}
+.nearpark .txt p:last-of-type{
+    margin-top: .3rem;
+    font-size: .22rem;
+}
+.nearpark .txt p:last-of-type i{
+    color: #4dbaff;
+}
+.hotshop{
+    width: 100%;
+}
+.hotshop ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hotshop ul li{
+    width: 32%;
+    float: left;
+    margin-top: .2rem;
+}
+.hotshop ul li img{
+    width: 100%;
+}
+.typrice{
+    display: flex;
+    justify-content: space-around;
+    margin-top: .1rem;
+    color: #333;
+}
+.typrice i{
+    font-size: .28rem;
+    color: #A63845;
+}

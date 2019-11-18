@@ -1,0 +1,55 @@
+搜索：
+glyphicon glyphicon-search
+麦克风：
+glyphicon glyphicon-volume-down
+扫描二维码：
+glyphicon glyphicon-qrcode
+
+
+景点：
+glyphicon glyphicon-camera
+路线：
+glyphicon glyphicon-road
+周边：
+glyphicon glyphicon-cd
+天气;
+glyphicon glyphicon-cloud
+美食：
+glyphicon glyphicon-cutlery
+娱乐：
+glyphicon glyphicon-heart
+购物：
+glyphicon glyphicon-shopping-cart
+社区：
+glyphicon glyphicon-blackboard
+
+订单：
+glyphicon glyphicon-list-alt
+收藏：
+glyphicon glyphicon-star
+首页：
+glyphicon glyphicon-home
+分类：
+glyphicon glyphicon-th-large
+我的：
+glyphicon glyphicon-user
+
+返回：
+glyphicon glyphicon-menu-left
+收藏爱心：
+glyphicon glyphicon-heart
+分享：
+glyphicon glyphicon-share
+发表评论：
+glyphicon glyphicon-comment
+选中：
+glyphicon glyphicon-ok
+小三点：
+glyphicon glyphicon-option-horizontal
+
+途经：
+glyphicon glyphicon-refresh
+温馨提示：
+glyphicon glyphicon-bullhorn
+热卖：
+glyphicon glyphicon-fire

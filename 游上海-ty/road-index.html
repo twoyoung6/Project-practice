@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>交通线路</title>
+    <script>
+        var html = document.getElementsByTagName('html')[0];
+        var width = window.innerWidth;
+        var fontSize = 100 / 750 * width;
+        html.style.fontSize = fontSize + 'px';
+        window.onresize = function () {
+            var html = document.getElementsByTagName('html')[0];
+            var width = window.innerWidth;
+            var fontSize = 100 / 750 * width;
+            html.style.fontSize = fontSize + 'px';
+        }
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/ty-base.css"/>
+    <link rel="stylesheet" href="css/ty-road-index.css"/>
+</head>
+<body>
+<div class="tylayout">
+    <!--顶部bar-->
+    <div class="tytopbar">
+        <div class="back"><a class="glyphicon glyphicon-menu-left" href="history.go(-1)"></a></div>
+        <div class="share"><a class="glyphicon glyphicon-heart" href="javascript:;"></a><a
+                class="glyphicon glyphicon-share" href="javascript:;"></a></div>
+    </div>
+    <!--目的地-->
+    <div class="tytitle">
+        <div class="title_l fl">
+            <h1>上海东方明珠</h1>
+            <a class="rail"><i>18</i><span>公里</span></a>
+            <a href="javascript:;" class="chong">公交充值点</a></a>
+        </div>
+        <div class="title_r fr">
+            <a href="javascript:;"><span class="glyphicon glyphicon-road"></span><p>去这里</p></a>
+        </div>
+    </div>
+    <!--地铁线路-->
+    <div class="tyroad">
+        <div class="line">
+            <div class="linenum">2号线</div>
+            <div class="linename">
+                <div class="start"><span>开往</span> <i>浦东机场</i> <span>方向</span></div>
+                <div class="destina"><span>首</span><i>6：30 </i><span>尾</span><i>23：30</i></div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="linename">
+                <div class="start"><span>开往</span> <i>徐径东</i> <span>方向</span></div>
+                <div class="destina"><span>首</span><i>5：00 </i><span>尾</span><i>22：30</i></div>
+            </div>
+        </div>
+        <div class="tickets clearfix">
+            <div class="tickets_l fl">票价<i>3 - 6</i>元</div>
+            <div class="tickets_r fr"><a href="javascript:;">地铁线路图</a></div>
+        </div>
+    </div>
+    <!--线路途径站点详情-->
+    <div class="typass clearfix">
+        <h3>途经站点</h3>
+        <div class="passroad">
+            <ul class="clearfix">
+                <li class="tostart glyphicon glyphicon-refresh"><a href="javascript:;">徐泾东</a></li>
+                <li><a href="javascript:;">虹桥火车站</a></li>
+                <li><a href="javascript:;">虹桥2号航站楼</a></li>
+                <li class="active"><a href="javascript:;">陆家嘴</a></li>
+                <li><a href="javascript:;">东昌路</a></li>
+                <li><a href="javascript:;">世纪大道</a></li>
+                <li><a href="javascript:;">幸福大道</a></li>
+                <li><a href="javascript:;">南浦大桥</a></li>
+                <li><a href="javascript:;">金融大厦</a></li>
+                <li><a href="javascript:;">美帝街</a></li>
+                <li class="toend glyphicon glyphicon-map-marker"><a href="javascript:;">浦西街</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--附近公交-->
+    <div class="tylinear">
+        <h3>附近公交</h3>
+        <div class="way">
+            <ul>
+                <li><p>西藏北路地铁站</p><p>（8号线）</p></li>
+                <li><p>海伦路地铁站</p><p>（5号线、12号线）</p></li>
+                <li><p>南浦大桥地铁站</p><p>（1号线、7号线）</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/ty-road-index.js"></script>
+</html>

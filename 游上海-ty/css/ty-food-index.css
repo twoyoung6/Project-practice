@@ -1,0 +1,121 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.tylayout {
+  width: 100%;
+  margin: 0 auto;
+  background: #F4F4F4;
+  position: relative;
+  font-size: .26rem;
+}
+.tytopbar {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 0 0.2rem;
+  height: .7rem;
+  line-height: .7rem;
+  font-size: .34rem;
+  background: #4DBAFF;
+  color: #fff;
+}
+.tytopbar .title {
+  text-align: center;
+  width: 100%;
+}
+.tytopbar .back a {
+  width: .5rem;
+  height: .42rem;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+}
+.tytap {
+  width: 100%;
+  height: .64rem;
+  line-height: .64rem;
+  background: #ededed;
+  margin-bottom: .1rem;
+}
+.tytap > ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.tytap > ul li a {
+  color: #333;
+  font-size: .32rem;
+  display: inline-block;
+  height: .64rem;
+}
+.tytap > ul li a:hover,
+.tytap > ul li aactive {
+  color: #4DBAFF;
+  border-bottom: 2px solid #4DBAFF;
+}
+.tytap > ul li.active a {
+  color: #4DBAFF;
+  border-bottom: 2px solid #4DBAFF;
+}
+.tybanner {
+  width: 100%;
+}
+.tybanner .am-slider {
+  width: 100%;
+  height: 100%;
+}
+.tybanner .am-slider .am-viewport {
+  width: 100%;
+  height: 100%;
+}
+.tybanner .am-slider .am-viewport .am-slides {
+  width: 100%;
+  height: 100%;
+}
+.tybanner .am-slider .am-viewport .am-slides img {
+  width: 100%;
+  height: 100%;
+}
+.tybanner .am-slider-a5 .am-control-nav li a.am-active {
+  background-color: #4DBAFF;
+}
+.tyfood {
+  padding: 0 .3rem .3rem .3rem;
+}
+.tyfood .title {
+  height: .92rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #333;
+  font-size: .3rem;
+  letter-spacing: 2px;
+  margin-bottom: .1rem;
+}
+.tyfood .title i {
+  margin-right: .1rem;
+  font-size: .34rem;
+  color: #4DBAFF;
+}
+.tyfood .mainfood {
+  width: 100%;
+}
+.tyfood .mainfood > ul {
+  width: 100%;
+}
+.tyfood .mainfood > ul li {
+  width: 50%;
+  float: left;
+  padding: .1rem;
+}
+.tyfood .mainfood > ul li img {
+  width: 100%;
+}
+.tyfood .mainfood > ul li p {
+  text-align: center;
+  font-size: .28rem;
+  height: .55rem;
+  line-height: .55rem;
+  color: #333;
+}

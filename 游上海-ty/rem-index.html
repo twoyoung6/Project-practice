@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>首页-游上海</title>
+    <!--如果是IE，会使用最新的渲染引擎进行渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--标准的视口设置-->
+    <script>
+        !function (e) {
+            function t(a) {
+                if (i[a])return i[a].exports;
+                var n = i[a] = {exports: {}, id: a, loaded: !1};
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {value: !0});
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <title>首页-游上海</title>
+    <link rel="stylesheet" href="css/ty-base.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/ty-index.css"/>
+</head>
+<body>
+<div class="tylayout" id="layout">
+    <!--搜索框-->
+    <div class="tysearch">
+        <a class="glyphicon glyphicon-search"></a>
+        <a class="voice"></a>
+
+        <form action=""><input id="search" name="search" type="text" placeholder="目的地 / 景点 / 攻略"/></form>
+        <a class="glyphicon glyphicon-qrcode"></a>
+    </div>
+    <!--轮播图-->
+    <div class="tysh_banner" id="sh_banner">
+        <ul class="clearfix">
+            <li><a href="javascript:;"><img src="img/banner.jpg" alt=""/></a></li>
+            <li><a href="javascript:;"><img src="img/banner1.jpg" alt=""/></a></li>
+            <li><a href="javascript:;"><img src="img/banner2.jpg" alt=""/></a></li>
+        </ul>
+        <div class="slide"></div>
+    </div>
+    <!--导航块-->
+    <div class="tynav clearfix">
+        <ul class="clearfix">
+            <li><a class="glyphicon glyphicon-camera" href="javascript:;"><p>景点</p></a></li>
+            <li><a class="glyphicon glyphicon-road" href="javascript:;"><p>路线</p></a></li>
+            <li><a class="glyphicon glyphicon-cd" href="javascript:;"><p>周边</p></a></li>
+            <li><a class="glyphicon glyphicon-cloud" href="javascript:;"><p>天气</p></a></li>
+            <li><a class="glyphicon glyphicon-cutlery" href="javascript:;"><p>美食</p></a></li>
+            <li><a class="glyphicon glyphicon-heart" href="javascript:;"><P>娱乐</p></a></li>
+            <li><a class="glyphicon glyphicon-shopping-cart" href="javascript:;"><p>购物</p></a></li>
+            <li><a class="glyphicon glyphicon-blackboard" href="javascript:;"><p>社区</p></a></li>
+        </ul>
+    </div>
+    <!--底部导航栏-->
+    <div class="tytap">
+        <a class="glyphicon glyphicon-list-alt" href="javascript:;"><p>订单</p></a>
+        <a class="glyphicon glyphicon-star" href="javascript:;"><p>收藏</p></a>
+        <a class="active glyphicon glyphicon-home" href="javascript:;"></a>
+        <a class="glyphicon glyphicon-th-large" href="javascript:;"><p>分类</p></a>
+        <a class="glyphicon glyphicon-user" href="javascript:;"><p>我的</p></a>
+    </div>
+</div>
+<div class="tysearchpage" id="searchpage">
+    <!--搜索独立页搜索框-->
+    <div class="pagetop">
+        <div class="searchbtn">
+            <a class="glyphicon glyphicon-menu-left" href="javascript:;" id="backindex"></a>
+            <a class="glyphicon glyphicon-search"></a>
+            <a class="voice"></a>
+
+            <form action=""><input name="search" type="text" placeholder="目的地 / 景点 / 攻略" autofocus="autofocus"/></form>
+        </div>
+        <div class="keywords">
+            <div class="tag">历史搜索记录</div>
+            <div class="historywords">
+                <span class="label label-default">Default</span>
+                <span class="label label-primary">Primary</span>
+                <span class="label label-success">Success</span>
+                <span class="label label-info">Info</span>
+                <span class="label label-warning">Warning</span>
+                <span class="label label-danger">Danger</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ty-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>特色美食推荐</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/ty-base.css"/>
+    <link rel="stylesheet" href="css/ty-food-index.css"/>
+    <script>
+        var html = document.getElementsByTagName('html')[0];
+        var width = window.innerWidth;
+        var fontSize = 100 / 750 * width;
+        html.style.fontSize = fontSize + 'px';
+        window.onresize = function () {
+            var html = document.getElementsByTagName('html')[0];
+            var width = window.innerWidth;
+            var fontSize = 100 / 750 * width;
+            html.style.fontSize = fontSize + 'px';
+        }
+    </script>
+</head>
+<body>
+<div class="tylayout">
+    <!--顶部bar-->
+    <div class="tytopbar">
+        <div class="back"><a class="am-icon-chevron-left" href="history.go(-1)"></a></div>
+        <div class="title">周边预订</div>
+    </div>
+    <!--导航tap-->
+    <div class="tytap clearfix">
+        <ul>
+            <li><a href="javascript:;">酒店预定</a></li>
+            <li><a href="javascript:;">门票预订</a></li>
+            <li class="active"><a href="javascript:;">美食推荐</a></li>
+            <li><a href="javascript:;">出行服务</a></li>
+        </ul>
+    </div>
+    <!--焦点图-->
+    <div class="tybanner">
+        <div data-am-widget="slider" class="am-slider am-slider-a5" data-am-slider='{"directionNav":false}'>
+            <ul class="am-slides">
+                <li>
+                    <img src="img/food1.jpg">
+                </li>
+                <li>
+                    <img src="img/food2.jpg">
+                </li>
+                <li>
+                    <img src="img/food3.jpg">
+                </li>
+                <li>
+                    <img src="img/food4.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tyfood">
+        <div class="title"><i class="am-icon-cutlery"></i>特色美食</div>
+        <div class="mainfood">
+            <ul>
+                <li><a href="javascript:;"><img src="img/food1.jpg" alt=""/><p>意大利面</p></a></li>
+                <li><a href="javascript:;"><img src="img/food2.jpg" alt=""/><p>健康简餐</p></a></li>
+                <li><a href="javascript:;"><img src="img/food3.jpg" alt=""/><p>韩式烤肉</p></a></li>
+                <li><a href="javascript:;"><img src="img/food4.jpg" alt=""/><p>冰镇夏饮</p></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+</body>
+</html>

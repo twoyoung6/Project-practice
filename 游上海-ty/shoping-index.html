@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        !function (e) {
+            function t(a) {
+                if (i[a])return i[a].exports;
+                var n = i[a] = {exports: {}, id: a, loaded: !1};
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {value: !0});
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <title>同城购</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/ty-base.css"/>
+    <link rel="stylesheet" href="css/ty-shoping-index.css"/>
+</head>
+<body>
+<div class="tylayout">
+    <!--顶部bar-->
+    <div class="tytopbar">
+        <div class="back">
+            <a class="glyphicon glyphicon-menu-left" href="history.go(-1)"></a>
+        </div>
+        <div class="title">ONLY</div>
+        <div class="share">
+            <a class="glyphicon glyphicon-option-horizontal" href="javascript:;"></a>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="javascript:;"><img src="img/shoping.jpg" alt="购物"></a>
+            </div>
+            <div class="item">
+                <a href="javascript:;"><img src="img/shoping.jpg" alt="购物"></a>
+            </div>
+            <div class="item">
+                <a href="javascript:;"><img src="img/shoping.jpg" alt="购物"></a>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="tyshoppark">
+        <div class="near">
+            <div class="tymsg">
+                <i class="glyphicon glyphicon-bullhorn"></i><span>提示：门店购买享更多优惠！</span>
+            </div>
+            <div class="nearpark clearfix">
+                <div class="fl">
+                    <img src="img/park1.JPG" alt=""/>
+
+                    <div class="txt">
+                        <p><a href="#">人民广场店</a></p>
+
+                        <p><i class="glyphicon glyphicon-map-marker"></i>距您236米</p>
+                    </div>
+                </div>
+                <div class="fl"><img src="img/park2.JPG" alt=""/>
+
+                    <div class="txt">
+                        <p><a href="#">黄河路店</a></p>
+
+                        <p><i class="glyphicon glyphicon-map-marker"></i>距您510米</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotshop">
+            <ul>
+                <li><a href="#"><img src="img/hot.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+                <li><a href="#"><img src="img/hot2.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+                <li><a href="#"><img src="img/hot.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+                <li><a href="#"><img src="img/hot2.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+                <li><a href="#"><img src="img/hot.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+                <li><a href="#"><img src="img/hot2.jpg" alt=""/>
+
+                    <div class="typrice"><i class="glyphicon glyphicon-fire"></i><span>￥<em>569</em></span></div>
+                </a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

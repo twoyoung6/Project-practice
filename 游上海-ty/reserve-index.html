@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单个门票预订</title>
+    <script>
+        !function (e) {
+            function t(a) {
+                if (i[a])return i[a].exports;
+                var n = i[a] = {exports: {}, id: a, loaded: !1};
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {value: !0});
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <title>单个门票预订页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/ty-base.css"/>
+    <link rel="stylesheet" href="css/ty-reverse-index.css"/>
+</head>
+<body>
+<div class="tylayout">
+    <!--顶部bar-->
+    <div class="tytopbar">
+        <div class="back"><a class="glyphicon glyphicon-menu-left" href="history.go(-1)"></a></div>
+        <div class="title">杜纱夫人蜡像馆</div>
+        <div class="share"><a class="glyphicon glyphicon-heart" href="javascript:;"></a><a
+                class="glyphicon glyphicon-share" href="javascript:;"></a></div>
+    </div>
+    <!--景点介绍-->
+    <div class="tyscene clearfix">
+        <div class="row">
+            <div class="detail">
+                <div class="detail_l fl">
+                    <h1>景点介绍</h1>
+
+                    <p>杜莎夫人蜡像馆（Madame Tussaud's）是位于英国伦敦的一间蜡像馆。杜莎夫人蜡像馆是全世界水平最高的蜡像馆之一，有众多世界名人的蜡像，其中恐怖屋最为出名。</p>
+
+                    <div class="zan fl"><a class="glyphicon glyphicon-heart" href="javascript:;"></a><span>4.6</span>分
+                    </div>
+                    <div class="comment fr"><a class="glyphicon glyphicon-comment"
+                                               href="javascript:;"></a><span>3837</span>评论
+                    </div>
+                </div>
+                <div class="detail_r fr"><img src="img/hero.png" alt=""/></div>
+            </div>
+            <div class="adress"><i class="glyphicon glyphicon-road"></i>景区地址：<span>上海市浦东区金融大厦182楼</span></div>
+        </div>
+    </div>
+    <!--门票-->
+    <div class="tytickets">
+        <div class="row">门票</div>
+    </div>
+    <!--成人票-->
+    <div class="tyadult">
+        <div class="row">
+            <div class="tag_t"><span class="tik"></span><h3>成人票</h3></div>
+            <div class="tag_b">
+                <div class="tag_l fl">
+                    <div class="tagname">上海杜莎夫人蜡像馆（成人票）</div>
+                    <a href="javascript:;"><i></i>12点前可预订今日票</a><a href="javascript:;"><i></i>随时退</a>
+                    <div class="detaiinfo"><a href="#">详细信息>></a></div>
+                </div>
+                <div class="tag_r fr">
+                    <span>￥199</span>
+                    <span>￥99</span>
+                    <div class="subm">
+                        <a href="javascript:;">在线支付</a>
+                        <a href="javascript:;">预定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--儿童票-->
+    <div class="tychild">
+        <div class="row">
+            <div class="tag_t"><span class="tik"></span><h3>儿童票</h3></div>
+            <div class="tag_b">
+                <div class="tag_l fl">
+                    <div class="tagname">上海杜莎夫人蜡像馆（儿童票）</div>
+                    <a href="javascript:;"><i></i>12点前可预订今日票</a><a href="javascript:;"><i></i>随时退</a>
+                    <div class="detaiinfo"><a href="#">详细信息>></a></div>
+                </div>
+                <div class="tag_r fr">
+                    <span>￥99</span>
+                    <span>￥69</span>
+                    <div class="subm">
+                        <a href="javascript:;">在线支付</a>
+                        <a href="javascript:;">预定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
