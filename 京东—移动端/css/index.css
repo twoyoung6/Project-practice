@@ -1,0 +1,277 @@
+/*首页样式*/
+
+.container {
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.jd_search {
+	width: 100%;
+	max-width: 640px;
+	height: 40px;
+	background: rgba(223, 35, 34, 0);
+	position: fixed;
+	z-index: 999;
+}
+
+.logo {
+	width: 57px;
+	height: 23px;
+	position: absolute;
+	left: 0;
+	background: url('../img/jd-sprites.png') no-repeat 0 -108px;
+	background-size: 200px 200px;
+	top: 7px;
+	left: 10px;
+}
+
+.searchBox {
+	width: 100%;
+	height: 40px;
+	padding-left: 80px;
+	padding-right: 60px;
+	position: fixed;
+	line-height: 40px;
+	max-width: 640px;
+	min-width: 320px;
+}
+
+.searchBox input {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 15px;
+	padding-left: 30px;
+	color: #666;
+	position: relative;
+}
+
+.searchBox::before {
+	content: '';
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	background: url('../img/jd-sprites.png') no-repeat -58px -107px;
+	/*精灵图为2倍图,400*400的,所以在使用时,尺寸需重新定义,位置也需要相应减少1倍*/
+	background-size: 200px 200px;
+	top: 9px;
+	left: 84px;
+	z-index: 2;
+}
+
+.login {
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+
+.banner {
+	width: 100%;
+	position: relative;
+	/*padding-top: 40px;*/
+	overflow: hidden;
+}
+
+.banner ul {
+	/*为了放8张图,宽度设置为banner的8倍*/
+	width: 800%;
+	position: relative;
+}
+
+.banner li {
+	/*百分比设置都是相对于父元素而定的*/
+	width: 12.5%;
+	float: left;
+	height: 100%;
+}
+
+.banner li img {
+	width: 100%;
+	/*转换为块级元素解决因为图片基线对齐多出几像素的问题*/
+	display: block;
+}
+
+.slide {
+	position: absolute;
+	bottom: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*.slide ul {
+	width: 128px;
+	margin: 0 auto;
+}*/
+
+.slide li {
+	width: 8px;
+	height: 8px;
+	margin: 0 4px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+
+.slide li.active {
+	background: #fff;
+}
+
+.nav {
+	padding: 16px 0 0 0;
+	width: 100%;
+}
+
+.nav li {
+	float: left;
+	width: 25%;
+	margin: 2px 0 15px 0;
+	text-align: center;
+}
+
+.nav li img {
+	width: 40%;
+	border-radius: 18px;
+	display: inline-block;
+}
+
+.nav li p {
+	margin-top: 5px;
+}
+
+.product {
+	width: 100%;
+}
+
+.produc_sk {
+	width: 100%;
+}
+
+.sk_t {
+	margin-top: 10px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+}
+
+.sk_t i {
+	display: inline-block;
+	width: 16px;
+	height: 20px;
+	float: left;
+	background: url("../img/seckill-icon.png") no-repeat;
+	background-size: 16px 20px;
+	margin: 3px 9px;
+}
+
+.sk_t h3 {
+	float: left;
+	font: 14px/30px "microsoft yahei", sans-serif;
+	color: #E92322;
+}
+
+.sk_time {
+	float: left;
+	margin-left: 8px;
+}
+
+.sk_time span {
+	padding: 0 4px;
+	margin: 0 2px;
+	background: #000;
+	color: #fff;
+}
+
+.sk_time span:nth-child(3n) {
+	background: transparent;
+	margin: 0 1px;
+	color: #333;
+}
+
+.sk_r:hover a {
+	color: #E92322;
+}
+
+.detail {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.detail li {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+.detail li p:nth-child(2) {
+	color: #E92322;
+}
+.detail li p:nth-child(3) {
+	color: #999;
+	font-family: simsun;
+	text-decoration: line-through;
+}
+
+.detail li img {
+	width: 75%;
+}
+
+.product_hot {
+	width: 100%;
+	background: #fff;
+	margin-top: 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+.product_hot h3 {
+	font: bold 14px/30px "microsoft yahei", sans-serif;
+	margin-top: 10px;
+	padding-left: 20px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.product_hot h3:before {
+	content: '';
+	height: 15px;
+	width: 3px;
+	display: block;
+	position: absolute;
+	background: #E92322;
+	left: 8px;
+	top: 8px;
+	border-radius: 100%;
+}
+
+.product_hot li {
+	width: 50%;
+	float: left;
+}
+
+.product_hot li:nth-child(2){
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+}
+
+.product_hot li:nth-child(3) {
+	border-left: 1px solid #ddd;
+}
+
+.product_hot li img {
+	width: 100%;
+	display: block;
+}
+.hotmark li{
+	float: none;
+}
+.hotmark ul{
+	position: relative;
+}
+.hotmark li:nth-child(3){
+	position: absolute;
+	right: 0px;
+	top: 0;
+}

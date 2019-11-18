@@ -1,0 +1,182 @@
+/*这是京东移动端分类信息页样式*/
+html,body{
+    width:100%;
+    height:100%;
+}
+.contain {
+    width: 100%;
+    height: 100%;
+}
+
+.search {
+    width: 100%;
+    height: 40px;
+    background-color: #fde0c6;
+    padding: 0 55px;
+    position: absolute;
+    z-index: 999;
+}
+
+.back {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    font-size: 18px;
+}
+
+.menu {
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+    top: 12px;
+}
+
+.text {
+    width: 100%;
+}
+
+.text input {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 15px;
+    color: #666;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.guide {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 999;
+}
+
+.guide ul {
+    width: 100%;
+    position: relative;
+    border-right: 1px solid #ddd;;
+}
+
+.guide li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.guide li a {
+    width: 100%;
+    display: block;
+}
+
+.guide li.active {
+    background: #fd6969;
+}
+.guide li.active a{
+    color: #fff;
+}
+.detail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 100px;
+    overflow: hidden;
+}
+
+/*.d_banner{*/
+/*width: 100%;*/
+/*}*/
+/*.d_banner ul{*/
+/*width: 300%;*/
+/*}*/
+/*.d_banner li{*/
+/*width: 33.33%;*/
+/*float: left;*/
+/*}*/
+/*.d_banner li img{*/
+/*width: 100%;*/
+/*}*/
+.d_banner {
+    width: 100%;
+    overflow: hidden;
+    /*默认不可见*/
+    visibility: hidden;
+    position: relative;
+    z-index: 999;
+}
+
+.banner_ul {
+    overflow: hidden;
+    position: relative;
+}
+
+.banner_ul > li {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.banner_ul > li img {
+    width: 100%;
+    display: block;
+}
+
+.detailtag {
+    width: 100%;
+    font: bold 14px/30px 'yahei';
+    height: 30px;
+    padding-left: 25px;
+    position: relative;
+    background: #fff;
+    z-index: 998;
+}
+
+.detailtag::before {
+    content: '';
+    width: 3px;
+    height: 15px;
+    background: #E92322;
+    position: absolute;
+    top: 8px;
+    left: 8px
+}
+
+.detail_b {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.detail_b ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+.detail_b li {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.detail_b li img {
+    width: 75%;
+}
+
+.detail_b li p {
+    font: 12px/24px 'yahei';
+}
