@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+
+			<div class="textsearch">
+				<div class="mui-switch mui-switch-blue mui-active" id="myswitch">
+					<div class="mui-switch-handle"></div>
+				</div>
+				<textarea name="searchcontent" rows="5" cols="1" placeholder="输入查询的词或者句子吧~~~" maxlength="200" id="searchcontent" onfocus="onfocus"></textarea>
+				<div class="mui-icon mui-icon-closeempty" id="remove"></div>
+			</div>
+			<button type="button" class="mui-btn mui-btn-grey youdao" id="searchbtn">翻译吧，小羊</button>
+			<div class="article">
+				<div class="translate" id="info"></div>
+				<div class="mui-icon mui-icon-chatboxes" id="clone"></div>
+			</div>
+
+		</div>
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/h.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+		<!--窗口切换操作-->
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var _index, _self, _next, _prev;
+			//	滑动切换页面操作
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_next = plus.webview.getWebviewById('tap3.html');
+				_index = plus.webview.getLaunchWebview();
+				_prev = plus.webview.getWebviewById('tap1.html');
+				_self.drag({
+					direction: 'left',
+					moveMode: 'followFinger'
+				}, {
+					view: _next,
+					moveMode: 'follow'
+				}, function(e) {
+					//		console.log(JSON.stringify(e));
+					if(e.type == 'end' && e.result) {
+						//			按钮样式跟着切换
+						_index.evalJS('h("#muitab").find("a").removeClass("mui-active"),h("#nav3").addClass("mui-active")');
+					}
+				});
+				_self.drag({
+					direction: 'right',
+					moveMode: 'followFinger'
+				}, {
+					view: _prev,
+					moveMode: 'follow'
+				}, function(e) {
+					//		console.log(JSON.stringify(e));
+					if(e.type == 'end' && e.result) {
+						//			按钮样式跟着切换
+						_index.evalJS('h("#muitab").find("a").removeClass("mui-active"),h("#nav1").addClass("mui-active")');
+					}
+				});
+			});
+		</script>
+		<!--请求翻译结果-->
+		<script type="text/javascript">
+			//	判断输入内容是否为空
+			h('#searchbtn').tap(function() {
+				var content = h('#searchcontent').val();
+				if(content.trim() == '') {
+					mui.toast('这是要翻译啥~');
+					return false;
+				}
+			});
+			$('#searchbtn').click(function() {
+				//	判断目标语言
+				var isActive = $("#myswitch").hasClass("mui-active"),
+					lan = null;
+				if(isActive) {
+					lan = 'zh';
+				} else {
+					lan = 'en';
+				}
+				var q = $('#searchcontent').val(),
+					from = 'auto',
+					to = lan,
+					appid = '20170620000059483',
+					key = 'ecqQxTTATusA3QLt0HYY',
+					salt = (new Date).getTime(),
+					str = appid + q + salt + key,
+					sign = MD5(str);
+				$.ajax({
+					type: 'get',
+					url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+					dataType: 'jsonp',
+					data: {
+						q: q,
+						from: from,
+						to: to,
+						appid: appid,
+						salt: salt,
+						sign: sign
+					},
+					success: function(data) {
+						$('#info').html(data.trans_result[0].dst);
+						$('.article').show();
+					},
+					error: function() {
+						mui.toast('哎呀，臣妾做不到啊~');
+						return false;
+					}
+				})
+			});
+			//  一键清除输入内容
+			$('#remove').click(function() {
+				$('#searchcontent').val('');
+			})
+			//			移动端实现将文本赋值到剪贴板
+			function Copy(str) {
+				var save = function(e) {
+					e.clipboardData.setData('text/plain', str);
+					e.preventDefault();
+				}
+				document.addEventListener('copy', save);
+				document.execCommand('copy');
+				document.removeEventListener('copy', save);
+			}
+			$('.article').on('click', '#clone', function() {
+				var str = $('#info').html();
+				Copy(str);
+				mui.toast('已经复制到剪贴板~');
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/banner.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/banner1.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/banner2.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="images/banner.jpg">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="images/banner1.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" id="indicator">
+					<div class="mui-indicator homeindicator mui-active"></div>
+					<div class="mui-indicator homeindicator"></div>
+					<div class="mui-indicator homeindicator"></div>
+				</div>
+			</div>
+		</div>
+		<ul class="mui-table-view">
+			<!--<li class="mui-table-view-cell mui-media">
+				<a href="article.html">
+					<img class="mui-media-object mui-pull-left" src="images/appLogo.png">
+					<div class="mui-media-body">
+						幸福
+						<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>-->
+		</ul>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/h.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<!--文章列表模板-->
+		<script type="text/html" id="newlist">
+			<li class="mui-table-view-cell mui-media">
+				<a href="{{url}}">
+					<img class="mui-media-object mui-pull-left" src="{{thumbnail_pic_s}}">
+					<div class="mui-media-body">
+						{{title}}
+						<p class="mui-ellipsis">{{author_name}}{{date}}</p>
+					</div>
+				</a>
+			</li>
+		</script>
+		<!--窗口切换-->
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var _index, _self, _next;
+
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 2500 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+
+			//	滑动切换页面操作
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_next = plus.webview.getWebviewById('tap2.html');
+				_index = plus.webview.getLaunchWebview();
+
+				_self.drag({
+					direction: 'left',
+					moveMode: 'followFinger'
+				}, {
+					view: _next,
+					moveMode: 'follow'
+				}, function(e) {
+					//		console.log(JSON.stringify(e));
+					if(e.type == 'end' && e.result) {
+						//			按钮样式跟着切换
+						_index.evalJS('h("#muitab").find("a").removeClass("mui-active"),h("#nav2").addClass("mui-active")');
+					}
+				});
+
+			});
+			
+		</script>
+	</body>
+
+</html>

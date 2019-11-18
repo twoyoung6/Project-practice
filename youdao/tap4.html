@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		tap4
+
+		<script src="js/mui.min.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+
+			var _index, _self, _next, _prev;
+
+			//	滑动切换页面操作
+			mui.plusReady(function() {
+				_self = plus.webview.currentWebview();
+				_index = plus.webview.getLaunchWebview();
+				_prev = plus.webview.getWebviewById('tap3.html');
+				_self.drag({
+					direction: 'right',
+					moveMode: 'followFinger'
+				}, {
+					view: _prev,
+					moveMode: 'follow'
+				}, function(e) {
+					//		console.log(JSON.stringify(e));
+					if(e.type == 'end' && e.result) {
+						//			按钮样式跟着切换
+						_index.evalJS('h("#muitab").find("a").removeClass("mui-active"),h("#nav3").addClass("mui-active")');
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<!--顶部-->
+			<header class="mui-bar mui-bar-nav head">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</h1>
+			</header>
+			<!--新闻列表-->
+			<div class="mui-content article" id="article"></div>
+			<!--底部分享-->
+			<nav class="mui-bar mui-bar-tab share" id="share">
+				<a class="mui-tab-item mui-active">
+					<span class="mui-icon mui-icon-redo"></span>
+					<span class="mui-tab-label">分享</span>
+				</a>
+			</nav>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/h.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			//   请求新闻数据
+			var news;
+			mui.plusReady(function() {
+				var _self = plus.webview.currentWebview();
+				mui.getJSON(
+					'http://hoa.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=info&id=' + _self.newsId,
+					function(data) {
+						console.log(data);
+						h('#article').html(data.content);
+						h('.mui-title').html(data.title);
+						news = data;
+					}
+				);
+			});
+			//	分享按钮功能
+			h('#share').tap(function() {
+				var actionbuttons = [{
+					title: "微信好友"
+				}, {
+					title: "朋友圈"
+				}];
+				var actionstyle = {
+					title: "请选择分享类型",
+					cancel: "取消",
+					buttons: actionbuttons
+				};
+				plus.nativeUI.actionSheet(actionstyle, function(e) {
+					if(e.index) {
+						shareNow(e.index);
+					}
+				});
+			});
+			var shareWx = null;
+
+			function shareNow(type) {
+				plus.share.getServices(function(services) {
+					for(var k in services) {
+						if(services[k].id = 'weixin') {
+							shareWx = services[k];
+						}
+					}
+					if(shareWx == null) {
+						mui.toast('您没有安装微信');
+						return;
+					}
+					var msg = {
+						content: "微信内容分享测试",
+						href: "http://www.twoyoung.top"
+					};
+					if(type == 1) {
+						msg.extra = {
+							scene: "WXSceneSession"
+						}
+					} else {
+						msg.extra = {
+							scene: "WXSceneTimeline"
+						}
+					}
+					shareWx.send(msg, function() {
+						mui.toast('分享成功');
+					}, function() {
+						mui.toast('您取消了分享');
+					});
+				}, function() {
+					mui.toast('获取分享服务失败');
+				});
+			}
+		</script>
+	</body>
+
+</html>

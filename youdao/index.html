@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>小羊翻译官</title>
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<header class="mui-bar mui-bar-nav header">
+				<div class="logo"><img src="images/logo.png" /></div>
+				<div class="mui-search"><input type="text" name="" id="search" value="" placeholder="输入搜索的单词" class="mui-input-speech"/></div>
+			</header>
+			<div class="footer" id="footer">
+				<nav class="mui-bar mui-bar-tab" id="muitab">
+					<a class="mui-tab-item mui-active" id="nav1">
+						<span class="mui-icon mui-icon-home-filled"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" id="nav2">
+						<span class="mui-icon mui-icon-compose"></span>
+						<span class="mui-tab-label">词典</span>
+					</a>
+					<a class="mui-tab-item" id="nav3">
+						<span class="mui-icon mui-icon-star-filled"></span>
+						<span class="mui-tab-label">热点</span>
+					</a>
+					<a class="mui-tab-item" id="nav4">
+						<span class="mui-icon mui-icon-person-filled"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav>
+			</div>
+
+		</div>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/h.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			//	切换窗口函数
+			function changeTap(index) {
+				//		获取四个窗口
+				mui.plusReady(function() {
+					var tap1 = plus.webview.getWebviewById('tap1.html');
+					var tap2 = plus.webview.getWebviewById('tap2.html');
+					var tap3 = plus.webview.getWebviewById('tap3.html');
+					var tap4 = plus.webview.getWebviewById('tap4.html');
+					//		计算每个窗口的偏移值
+					tap1.setStyle({
+						left: (1 - index) * 100 + '%'
+					});
+					tap2.setStyle({
+						left: (2 - index) * 100 + '%'
+					});
+					tap3.setStyle({
+						left: (3 - index) * 100 + '%'
+					});
+					tap4.setStyle({
+						left: (4 - index) * 100 + '%'
+					});
+				})
+
+			}
+			mui.init({
+				subpages: [{
+						url: 'tap1.html',
+						id: 'tap1.html',
+						styles: {
+							top: '44px',
+							bottom: '44px',
+							width: "100%"
+						}
+					},
+					{
+						url: 'tap2.html',
+						id: 'tap2.html',
+						styles: {
+							top: '44px',
+							bottom: '44px',
+							width: "100%",
+							left: "100%"
+						}
+					},
+					{
+						url: 'tap3.html',
+						id: 'tap3.html',
+						styles: {
+							top: '44px',
+							bottom: '44px',
+							width: "100%",
+							left: "200%"
+						}
+					},
+					{
+						url: 'tap4.html',
+						id: 'tap4.html',
+						styles: {
+							top: '44px',
+							bottom: '44px',
+							width: "100%",
+							left: "300%"
+						}
+					}
+				]
+			});
+			//	给每个底部菜单按钮绑定事件
+			h('#nav1').tap(function() {
+				changeTap(1);
+			});
+			h('#nav2').tap(function() {
+				changeTap(2);
+			});
+			h('#nav3').tap(function() {
+				changeTap(3);
+			});
+			h('#nav4').tap(function() {
+				changeTap(4);
+			});
+			//			搜索框跳转事件
+			h('#search').tap(function() {
+				changeTap(2);
+				h("#muitab").find("a").removeClass("mui-active");
+				h("#nav2").addClass("mui-active")
+			});
+		</script>
+	</body>
+
+</html>
